@@ -1,0 +1,46 @@
+1564323598a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:713:";;
+description = "Footer Partial"
+==
+{##}
+{# Footer Start #}
+<footer class="footer section">
+	<div class="container">
+		<div class="footer-btm pt-4">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						&copy; {{ "now"|date("Y") }} Celebes Tech</a>
+					</div>
+				</div>
+				<div class="col-lg-6 text-left text-lg-right">
+					<ul class="list-inline footer-socials">
+                        <li class="list-inline-item"><a href="#"><i class="ti-headphone-alt mr-2"></i>+62 812 3456 7890</a></li>
+						<li class="list-inline-item"><a href="#"><i class="ti-email mr-2"></i>support@celebestech.com</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{# Footer Close #}";s:5:"mtime";i:1564319445;s:6:"markup";s:676:"{##}
+{# Footer Start #}
+<footer class="footer section">
+	<div class="container">
+		<div class="footer-btm pt-4">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						&copy; {{ "now"|date("Y") }} Celebes Tech</a>
+					</div>
+				</div>
+				<div class="col-lg-6 text-left text-lg-right">
+					<ul class="list-inline footer-socials">
+                        <li class="list-inline-item"><a href="#"><i class="ti-headphone-alt mr-2"></i>+62 812 3456 7890</a></li>
+						<li class="list-inline-item"><a href="#"><i class="ti-email mr-2"></i>support@celebestech.com</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{# Footer Close #}";s:4:"code";N;s:11:"description";s:14:"Footer Partial";}}
