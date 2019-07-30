@@ -1,4 +1,3 @@
-;;
 description = "Header with TopBar and Navigation"
 ==
 {##}
@@ -19,21 +18,22 @@ description = "Header with TopBar and Navigation"
 			  <li class="nav-item active">
 				<a class="nav-link" href="{{ 'home'|page }}">Home <span class="sr-only">(current)</span></a>
 			  </li>
-			  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown03">
-						<li><a class="dropdown-item" href="{{ 'about'|page }}">Our company</a></li>
-						<li><a class="dropdown-item" href="{{ 'pricing'|page }}">Pricing</a></li>
-					</ul>
-			  </li>
-			   <li class="nav-item"><a class="nav-link" href="{{ 'services'|page }}">Services</a></li>
-			   <li class="nav-item"><a class="nav-link" href="{{ 'portfolio'|page }}">Portfolio</a></li>
-				 <li class="nav-item"><a class="nav-link" href="{{ 'blog'|page }}">Blog</a></li>
-			   <li class="nav-item"><a class="nav-link" href="{{ 'contact-us'|page }}">Contact</a></li>
+			  <!-- <li class="nav-item dropdown">
+			                      <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+			                      <ul class="dropdown-menu" aria-labelledby="dropdown03">
+			                          <li><a class="dropdown-item" href="{{ 'about'|page }}">Our company</a></li>
+			                          <li><a class="dropdown-item" href="{{ 'pricing'|page }}">Pricing</a></li>
+			                      </ul>
+			                </li> -->
+              <li class="nav-item"><a class="nav-link" href="{{ 'product'|page }}">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ 'solution'|page }}">Solutions</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ 'industries'|page }}">Industries</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="{{ 'blog'|page }}">Blog</a></li> -->
+              <li class="nav-item"><a class="nav-link" href="{{ 'contact-us'|page }}">Contact</a></li>
 			</ul>
 
 			<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-			  <a href="{{ 'contact-us'|page }}" class="btn btn-solid-border btn-round-full">Get a Quote</a>
+			  <a href="{{ 'contact-us'|page }}" class="btn btn-solid-border btn-round-full">Call Us</a>
 			</form>
 		  </div>
 		</div>

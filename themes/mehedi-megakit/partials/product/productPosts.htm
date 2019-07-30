@@ -1,0 +1,62 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "product"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{% set posts = blogPosts.posts %}
+
+{% for post in posts %}
+<section class="section blog-wrap {% if loop.index is divisible by(2) %}bg-gray{% else %}bg-white{% endif %}">
+  <div class="container">
+    <div class="row align-items-center">
+      <div
+        class="col-md-4 {% if loop.index is divisible by(2) %}order-md-0{% else %}order-md-1{% endif %}"
+      >
+        {% if post.featured_images.count > 0 %}
+        <img
+          class="img-fluid"
+          src="{{ post.featured_images.first.getThumb(540, 'auto') }}"
+        />
+        {% else %}
+        <img class="img-fluid" src="https://placehold.it/540x450" />
+        {% endif %}
+      </div>
+      <div class="col-md-8">
+        <h3 class="mb-3">{{ post.title }}</h3>
+        <p>{{ post.summary | raw }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<h4>{{ blogPosts.noPostsMessage }}</h4>
+{% endfor %} {% if posts.lastPage > 1 %}
+<ul class="pagination">
+  {% if posts.currentPage > 1 %}
+  <li>
+    <a
+      href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}"
+      >&larr; Prev</a
+    >
+  </li>
+  {% endif %} {% for page in 1..posts.lastPage %}
+  <li class="{{ posts.currentPage == page ? 'active' : null }}">
+    <a
+      href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}"
+      >{{ page }}</a
+    >
+  </li>
+  {% endfor %} {% if posts.lastPage > posts.currentPage %}
+  <li>
+    <a
+      href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}"
+      >Next &rarr;</a
+    >
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
